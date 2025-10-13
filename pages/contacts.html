@@ -1,80 +1,67 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - Портфолио студента</title>
 </head>
+
 <body>
-    <table border="1" cellpadding="10" cellspacing="0" width="100%">
-        <tr>
-            <td colspan="2" align="center">
-                [ЛОГОТИП]<br>
-                Лебедв Иван
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <a href="../index.html">Главная</a> | 
-                <a href="projects.html">Проекты</a> | 
-                <a href="diary.html">Дневник</a> | 
-                <a href="contacts.html">Контакты</a>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <h2>Свяжитесь со мной</h2>
-            </td>
-        </tr>
-        <tr>
-            <td width="50%" valign="top">
-                <table border="1" cellpadding="15" width="100%">
-                    <tr>
-                        <td>
-                            <form>
-                                <table width="100%">
-                                    <tr>
-                                        <td>Имя:</td>
-                                        <td><input type="text" size="30"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email:</td>
-                                        <td><input type="email" size="30"></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">Сообщение:</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <textarea rows="5" cols="40"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" align="center">
-                                            <input type="submit" value="Отправить сообщение">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </form>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td width="50%" valign="top">
-                <h3>Контакты:</h3>
-                <p>📧 lebedev.i.m@edu.mirea.ru</p>
-                <p>📱 GitHub:qGame4K </p>
-                <p>📍 Москва, Россия</p>
-                
-                <h3>Социальные сети:</h3>
-                <p>GitHub: <a href="https://github.com/qGame4K">github.com/username</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                © 2025 Контакты
-            </td>
-        </tr>
-    </table>
+    <header>
+        <div>
+            <img src="#" alt="Логотип">
+            <h1>Лебедев Иван</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="pages/projects.html">Проекты</a></li>
+            <li><a href="pages/diary.html">Дневник</a></li>
+            <li><a href="pages/contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Свяжитесь со мной</h2>
+
+        <section>
+            <h3>Контактная форма</h3>
+            <form>
+                <p>
+                    <label>Имя:</label><br>
+                    <input type="text" size="30">
+                </p>
+                <p>
+                    <label>Email:</label><br>
+                    <input type="email" size="30">
+                </p>
+                <p>
+                    <label>Сообщение:</label><br>
+                    <textarea rows="5" cols="40"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Отправить сообщение">
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h3>Контакты</h3>
+            <p><img src="images/email-icon.png" alt="Почта" width="16" height="16"> lebedev.i.m@edu.mirea.ru</p>
+            <p><img src="images/github-icon.png" alt="GitHub" width="16" height="16"> GitHub: qGame4K</p>
+            <p><img src="images/location-icon.png" alt="Местоположение" width="16" height="16"> Москва, Россия</p>
+
+            <h3>Социальные сети</h3>
+            <p><img src="images/github-icon.png" alt="GitHub" width="16" height="16">
+                <a href="https://github.com/qGame4K">github.com/qGame4K</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Контакты</p>
+    </footer>
 </body>
+
 </html>
