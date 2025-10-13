@@ -7,89 +7,64 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <!-- Шапка -->
-    <header>
-        <div>
-            <img src="#" alt="Логотип">
-            <h1>Имя Студента</h1>
-        </div>
-    </header>
+   <header>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/logo.png" alt="Логотип" />
+      <span class="navbar-text">Лебедев Иван</span>
+    </div>
+    <div class="navbar-links">
+      <a href="../index.html">🏠 Главная</a>
+      <a href="projects.html">💼 Проекты</a>
+      <a href="diary.html">📚 Дневник</a>
+      <a href="contacts.html">📞 Контакты</a>
+    </div>
+  </nav>
+</header>
 
-    <!-- Навигация -->
-    <nav>
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="projects.html">Проекты</a></li>
-            <li><a href="diary.html">Дневник</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-
-    <!-- Основной контент -->
     <main>
-        <!-- Заголовок и фильтры -->
-        <section>
-            <h1>Мои проекты</h1>
-            <p>Полная коллекция учебных и личных работ</p>
-            
-            <div>
-                <button data-filter="all">Все проекты</button>
-                <button data-filter="html-css">HTML/CSS</button>
-                <button data-filter="javascript">JavaScript</button>
-                <button data-filter="react">React</button>
-                <button data-filter="bootstrap">Bootstrap</button>
+        <section class="projects-page">
+            <div class="project-filters">
+                <h2>💼 Мои проекты</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">🌐 Все</button>
+                    <button class="filter-btn">📝 HTML</button>
+                    <button class="filter-btn">⚡ JS</button>
+                    <button class="filter-btn">⚛️ React</button>
+                </div>
             </div>
-        </section>
 
-        <!-- Сетка проектов -->
-        <section>
-            <div>
-                <!-- Проект 1 -->
-                <div data-category="html-css">
-                    <img src="/images/vid-na-trehmernuu-mul-tasnuu-pticu.jpg    " alt="Личный сайт">
-                    <h3>Личный сайт</h3>
-                    <p>Персональный сайт-визитка с информацией о себе и навыках</p>
-                    <div>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Адаптивная верстка</span>
-                    </div>
+            <div class="projects-grid">
+                <div class="project-card large">
+                    <img src="images/project1-full.jpg" alt="Личный сайт" class="project-image" onerror="this.style.display='none'">
+                    <h3>🌟 Личный сайт</h3>
+                    <p>HTML, CSS</p>
+                    <p>Современный адаптивный дизайн с анимациями</p>
                 </div>
-
-                <!-- Проект 2 -->
-                <div data-category="javascript">
-                    <img src="/images/i.jpeg" alt="Todo-приложение">
-                    <h3>Todo-приложение</h3>
-                    <p>Приложение для управления задачами с возможностью добавления, удаления и отметки выполненных</p>
-                    <div>
-                        <span>JavaScript</span>
-                        <span>Local Storage</span>
-                        <span>DOM API</span>
-                    </div>
+                <div class="project-card large">
+                    <img src="images/project2-full.jpg" alt="Todo-приложение" class="project-image" onerror="this.style.display='none'">
+                    <h3>✅ Todo-приложение</h3>
+                    <p>JavaScript</p>
+                    <p>Управление задачами с локальным хранением</p>
                 </div>
-
-                <!-- Проект 3 -->
-                <div data-category="react">
-                    <img src="/images/golubaa-ptica-3d-illustracia.jpg" alt="Интернет-магазин">
-                    <h3>Интернет-магазин</h3>
-                    <p>Полнофункциональный интернет-магазин с корзиной и фильтрацией товаров</p>
-                    <div>
-                        <span>React</span>
-                        <span>React Router</span>
-                        <span>Context API</span>
-                    </div>
+                <div class="project-card large">
+                    <img src="images/project3-full.jpg" alt="Интернет-магазин" class="project-image" onerror="this.style.display='none'">
+                    <h3>🛒 Интернет-магазин</h3>
+                    <p>React</p>
+                    <p>Полнофункциональный e-commerce с корзиной</p>
                 </div>
-
-                
-                
-
+                <div class="project-card large">
+                    <img src="images/project4-full.jpg" alt="Портфолио" class="project-image" onerror="this.style.display='none'">
+                    <h3>🎨 Портфолио</h3>
+                    <p>Bootstrap</p>
+                    <p>Responsive веб-дизайн с галереей работ</p>
+                </div>
             </div>
         </section>
     </main>
 
-    
     <footer>
-        <p>© 2025 Контакты</p>
+        <p>© 2025 Портфолио студента |</p>
     </footer>
 </body>
 </html>

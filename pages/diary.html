@@ -1,131 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Учебный дневник - Портфолио студента</title>
+    <title>Дневник - Портфолио студента</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
-
 <body>
-
     <header>
-        <div>
-            <img src="#" alt="Логотип">
-            <h1>Лебедв Иван</h1>
-        </div>
-    </header>
-
-
-    <nav>
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="projects.html">Проекты</a></li>
-            <li><a href="diary.html">Дневник</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/logo.png" alt="Логотип" />
+      <span class="navbar-text">Лебедев Иван</span>
+    </div>
+    <div class="navbar-links">
+      <a href="../index.html">🏠 Главная</a>
+      <a href="projects.html">💼 Проекты</a>
+      <a href="diary.html">📚 Дневник</a>
+      <a href="contacts.html">📞 Контакты</a>
+    </div>
+  </nav>
+</header>
 
 
     <main>
-
-        <section>
-            <h1>Мой учебный прогресс</h1>
-        </section>
-
-
-        <section>
-            <h2>История обучения</h2>
-            <div>
-                <div>
-                    <span>15 дек</span>
-                    <h3>Верстка макета сайта</h3>
-                    <p>Создание адаптивного макета главной страницы</p>
-                    <span>✓ Выполнено</span>
+        <section class="diary-page">
+            <h2>📈 Мой учебный прогресс</h2>
+            
+            <div class="progress-entries">
+                <div class="diary-entry">
+                    <span class="date">🎯 15 дек - Верстка макета сайта</span>
+                    <span class="status completed">✅</span>
                 </div>
-                <div>
-                    <span>10 дек</span>
-                    <h3>JavaScript основы</h3>
-                    <p>Изучение переменных, функций и DOM manipulation</p>
-                    <span>✓ Выполнено</span>
+                <div class="diary-entry">
+                    <span class="date">⚡ 10 дек - JavaScript основы</span>
+                    <span class="status completed">✅</span>
                 </div>
-                <div>
-                    <span>05 дек</span>
-                    <h3>Работа с формами</h3>
-                    <p>Валидация форм и обработка пользовательского ввода</p>
-                    <span>⏳ В процессе</span>
+                <div class="diary-entry">
+                    <span class="date">📝 05 дек - Работа с формами</span>
+                    <span class="status pending">⏳</span>
                 </div>
-                <div>
-                    <span>01 дек</span>
-                    <h3>Адаптивный дизайн</h3>
-                    <p>Media queries и mobile-first подход</p>
-                    <span>⏳ В процессе</span>
+                <div class="diary-entry">
+                    <span class="date">📱 01 дек - Адаптивный дизайн</span>
+                    <span class="status pending">⏳</span>
                 </div>
             </div>
-        </section>
 
-
-        <section>
-            <h2>Текущие курсы</h2>
-            <div>
-                <div>
-                    <h3>Веб-разработка</h3>
-                    <div>
-                        <div style="width: 90%;">90%</div>
+            <section class="current-courses">
+                <h3>📚 Текущие курсы</h3>
+                <div class="course-progress">
+                    <div class="course-item">
+                        <span>🌐 Веб-разработка</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                        <span>90%</span>
                     </div>
-                    <span>90%</span>
-                </div>
-                <div>
-                    <h3>JavaScript</h3>
-                    <div>
-                        <div style="width: 70%;">70%</div>
+                    <div class="course-item">
+                        <span>⚡ JavaScript</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                        <span>70%</span>
                     </div>
-                    <span>70%</span>
-                </div>
-                <div>
-                    <h3>React</h3>
-                    <div>
-                        <div style="width: 50%;">50%</div>
+                    <div class="course-item">
+                        <span>⚛️ React</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 50%"></div>
+                        </div>
+                        <span>50%</span>
                     </div>
-                    <span>50%</span>
                 </div>
-            </div>
-        </section>
+            </section>
 
-
-        <section>
-            <h2>Добавить новую запись</h2>
-            <form>
-                <div>
-                    <label for="date">Дата:</label>
-                    <input type="date" id="date" name="date">
-                </div>
-                <div>
-                    <label for="topic">Тема:</label>
-                    <input type="text" id="topic" name="topic">
-                </div>
-                <div>
-                    <label for="description">Описание работы:</label>
-                    <textarea id="description" name="description"></textarea>
-                </div>
-                <div>
-                    <label for="status">Статус:</label>
-                    <select id="status" name="status">
-                        <option value="completed">✓ Выполнено</option>
-                        <option value="in-progress">⏳ В процессе</option>
-                        <option value="planned">📅 Запланировано</option>
-                    </select>
-                </div>
-                <button type="submit">Добавить запись</button>
-            </form>
+            <button class="add-entry-btn">➕ Добавить запись</button>
         </section>
     </main>
 
-
     <footer>
-        <p>© 2025 Контакты</p>
+        <p>© 2025 Портфолио студента |</p>
     </footer>
 </body>
-
 </html>
