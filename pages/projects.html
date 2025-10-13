@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Портфолио студента</title>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div>
+            <img src="#" alt="Логотип">
+            <h1>Имя Студента</h1>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="diary.html">Дневник</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок и фильтры -->
+        <section>
+            <h1>Мои проекты</h1>
+            <p>Полная коллекция учебных и личных работ</p>
+            
+            <div>
+                <button data-filter="all">Все проекты</button>
+                <button data-filter="html-css">HTML/CSS</button>
+                <button data-filter="javascript">JavaScript</button>
+                <button data-filter="react">React</button>
+                <button data-filter="bootstrap">Bootstrap</button>
+            </div>
+        </section>
+
+        <!-- Сетка проектов -->
+        <section>
+            <div>
+                <!-- Проект 1 -->
+                <div data-category="html-css">
+                    <img src="#" alt="Личный сайт">
+                    <h3>Личный сайт</h3>
+                    <p>Персональный сайт-визитка с информацией о себе и навыках</p>
+                    <div>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Адаптивная верстка</span>
+                    </div>
+                </div>
+
+                <!-- Проект 2 -->
+                <div data-category="javascript">
+                    <img src="#" alt="Todo-приложение">
+                    <h3>Todo-приложение</h3>
+                    <p>Приложение для управления задачами с возможностью добавления, удаления и отметки выполненных</p>
+                    <div>
+                        <span>JavaScript</span>
+                        <span>Local Storage</span>
+                        <span>DOM API</span>
+                    </div>
+                </div>
+
+                <!-- Проект 3 -->
+                <div data-category="react">
+                    <img src="#" alt="Интернет-магазин">
+                    <h3>Интернет-магазин</h3>
+                    <p>Полнофункциональный интернет-магазин с корзиной и фильтрацией товаров</p>
+                    <div>
+                        <span>React</span>
+                        <span>React Router</span>
+                        <span>Context API</span>
+                    </div>
+                </div>
+
+                <!-- Проект 4 -->
+                <div data-category="bootstrap">
+                    <img src="#" alt="Портфолио">
+                    <h3>Портфолио</h3>
+                    <p>Адаптивный сайт-портфолио с использованием современных CSS-фреймворков</p>
+                    <div>
+                        <span>Bootstrap</span>
+                        <span>Responsive Design</span>
+                        <span>CSS Grid</span>
+                    </div>
+                </div>
+
+                <!-- Проект 5 -->
+                <div data-category="javascript">
+                    <img src="#" alt="Игра-платформер">
+                    <h3>Игра-платформер</h3>
+                    <p>2D игра с использованием Canvas API и физикой движения</p>
+                    <div>
+                        <span>JavaScript</span>
+                        <span>Canvas API</span>
+                        <span>Game Development</span>
+                    </div>
+                </div>
+
+                <!-- Проект 6 -->
+                <div data-category="react">
+                    <img src="#" alt="Погодное приложение">
+                    <h3>Погодное приложение</h3>
+                    <p>Приложение для просмотра погоды с использованием внешнего API</p>
+                    <div>
+                        <span>React</span>
+                        <span>REST API</span>
+                        <span>Axios</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <div id="project-modal">
+        <div>
+            <button id="close-modal">×</button>
+            <div>
+                <img src="#" alt="Проект" id="modal-image">
+                <div>
+                    <h2 id="modal-title">Название проекта</h2>
+                    <p id="modal-description">Описание проекта</p>
+                    
+                    <div>
+                        <h3>Использованные технологии</h3>
+                        <div id="modal-technologies"></div>
+                    </div>
+                    
+                    <div>
+                        <h3>Скриншоты</h3>
+                        <div id="modal-screenshots"></div>
+                    </div>
+                    
+                    <div>
+                        <a href="#" id="modal-live-link" target="_blank">Посмотреть живую версию</a>
+                        <a href="#" id="modal-code-link" target="_blank">Исходный код</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <p>© 2025 Контакты</p>
+    </footer>
+</body>
+</html>
