@@ -137,6 +137,7 @@ h1, h2, h3 {
 h1 {
     font-size: 2.5rem;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
 }
@@ -202,28 +203,72 @@ button:hover, .btn:hover {
     box-shadow: 0 6px 12px rgba(67, 97, 238, 0.3);
 }
 
-/* Прогресс-бары */
+/* Стили для навыков */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.skill-label {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skill-percentage {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: rgba(67, 97, 238, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+}
+
 .progress-container {
     background: #e9ecef;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
-    height: 20px;
-    margin: 0.5rem 0 1.5rem;
+    height: 12px;
+    margin: 0.5rem 0;
 }
 
 .progress-bar {
-    background: linear-gradient(90deg, var(--accent), var(--primary));
     height: 100%;
-    border-radius: 20px;
-    transition: width 1s ease-in-out;
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 10px;
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
+    position: relative;
 }
+
+/* Цвета для разных навыков */
+.progress-html { background: linear-gradient(90deg, #e34c26, #f06529); }
+.progress-css { background: linear-gradient(90deg, #264de4, #2965f1); }
+.progress-js { background: linear-gradient(90deg, #f0db4f, #f7df1e); color: #000 !important; }
+.progress-bootstrap { background: linear-gradient(90deg, #7952b3, #563d7c); }
+.progress-react { background: linear-gradient(90deg, #61dafb, #00d8ff); color: #000 !important; }
 
 /* Сетка проектов */
 .projects-grid, .skills-grid, .history-grid, .courses-grid {
@@ -515,11 +560,4 @@ section {
 /* Специфичные стили для главной страницы */
 .skills-grid > div {
     margin-bottom: 1.5rem;
-}
-
-.skill-name {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
 }
