@@ -1,109 +1,133 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио студента</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar-logo">
-                <img src="images/logo.png" alt="Логотип" />
-                <span class="navbar-text">Лебедев Иван</span>
+        <div class="container">
+            <div class="logo">
+                <img src="/images/icons/icons8-github-50.png" alt="Логотип" class="logo-img">
+                <h1>Иван Лебедев</h1>
             </div>
-            <div class="navbar-links">
-                <a href="index.html">🏠 Главная</a>
-                <a href="pages/projects.html">💼 Проекты</a>
-                <a href="pages/diary.html">📚 Дневник</a>
-                <a href="pages/contacts.html">📞 Контакты</a>
-            </div>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="pages/projects.html">Проекты</a></li>
+                    <li><a href="pages/diary.html">Дневник</a></li>
+                    <li><a href="pages/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-
     <main>
-        <section class="intro">
-            <div class="photo-placeholder">
-                <!-- Замените на ваше фото -->
-                <img src="images/milyi-kot-v-studii.jpg" alt="Фото студента"
-                    onerror="this.parentElement.innerHTML='📸 ФОТО'">
-            </div>
-            <div class="intro-text">
-                <h2>Привет! Я студент 👋</h2>
-                <p>🎯 Факультет ИПТИП, группа ЭФБО-11-24</p>
-                <p>💻 Увлекаюсь веб-разработкой</p>
-                <p>🚀 Изучаю современные технологии</p>
-                <button class="resume-btn">📄 Скачать резюме</button>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-image">
+                        <img src="/images/milyi-kot-v-studii.jpg" alt="Фото студента">
+                    </div>
+                    <div class="hero-text">
+                        <h2>Привет! Я студент</h2>
+                        <p>Фуллстек разработчик , группа ЭФБО-11-24
+                        </p>
+                        <p>Увлекаюсь веб-разработкой и создаю современные интерактивные приложения</p>
+                        <a href="assets/resume.pdf" class="btn" download>Скачать резюме</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="skills">
-            <h2>🛠️ Мои навыки</h2>
-            <div class="skill-bar">
-                <span>HTML/CSS</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 90%"></div>
+            <div class="container">
+                <h2>Мои навыки</h2>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML/CSS</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Bootstrap</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                    </div>
                 </div>
-                <span>90%</span>
-            </div>
-            <div class="skill-bar">
-                <span>JavaScript</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%"></div>
-                </div>
-                <span>80%</span>
-            </div>
-            <div class="skill-bar">
-                <span>Bootstrap</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 85%"></div>
-                </div>
-                <span>85%</span>
-            </div>
-            <div class="skill-bar">
-                <span>React</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 60%"></div>
-                </div>
-                <span>60%</span>
             </div>
         </section>
 
-        <section class="best-projects">
-            <h2>⭐ Лучшие проекты</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <!-- Замените на скриншот вашего проекта -->
-                    <img src="images/vid-na-trehmernuu-mul-tasnuu-pticu.jpg" alt="Проект 1" class="project-image"
-                        onerror="this.style.display='none'">
-                    <h3>🌟 Личный сайт</h3>
-                    <p>HTML, CSS, адаптивный дизайн</p>
-                </div>
-                <div class="project-card">
-                    <!-- Замените на скриншот вашего проекта -->
-                    <img src="images/vid-na-trehmernuu-pticu-aviatora.jpg" alt="Проект 2" class="project-image"
-                        onerror="this.style.display='none'">
-                    <h3>✅ Todo-приложение</h3>
-                    <p>JavaScript, локальное хранение</p>
-                </div>
-                <div class="project-card">
-                    <!-- Замените на скриншот вашего проекта -->
-                    <img src="images/golubaa-ptica-3d-illustracia.jpg" alt="Проект 3" class="project-image"
-                        onerror="this.style.display='none'">
-                    <h3>🛒 Интернет-магазин</h3>
-                    <p>React, современный UI/UX</p>
+        <section class="projects-preview">
+            <div class="container">
+                <h2>Лучшие проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="/images/golubaa-ptica-3d-illustracia.jpg" alt="Личный сайт">
+                        <h3>Личный сайт</h3>
+                        <p>Многостраничный веб-сайт с адаптивным дизайном</p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="/images/vid-na-trehmernuu-mul-tasnuu-pticu.jpg" alt="Todo-приложение">
+                        <h3>Todo-приложение</h3>
+                        <p>Интерактивное приложение для управления задачами</p>
+                        <div class="tech-tags">
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="/images/vid-na-trehmernuu-pticu-aviatora.jpg" alt="Интернет-магазин">
+                        <h3>Интернет-магазин</h3>
+                        <p>Полнофункциональный магазин с корзиной покупок</p>
+                        <div class="tech-tags">
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Портфолио студента |</p>
+        <div class="container">
+            <p>&copy; 2025 Иван Лебедев. Все права защищены.</p>
+            <div class="footer-contacts">
+                <a href="mailto:student@edu.ru">student@edu.ru</a>
+                <a href="https://github.com/username" target="_blank">GitHub</a>
+            </div>
+        </div>
     </footer>
 </body>
-
 </html>

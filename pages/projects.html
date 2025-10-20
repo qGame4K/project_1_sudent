@@ -4,67 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проекты - Портфолио студента</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-   <header>
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="images/logo.png" alt="Логотип" />
-      <span class="navbar-text">Лебедев Иван</span>
-    </div>
-    <div class="navbar-links">
-      <a href="../index.html">🏠 Главная</a>
-      <a href="projects.html">💼 Проекты</a>
-      <a href="diary.html">📚 Дневник</a>
-      <a href="contacts.html">📞 Контакты</a>
-    </div>
-  </nav>
-</header>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/icons/icons8-github-50.png" alt="Логотип" class="logo-img">
+                <h1>Иван Лебедев</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="projects.html" class="active">Проекты</a></li>
+                    <li><a href="diary.html">Дневник</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section class="projects-page">
-            <div class="project-filters">
-                <h2>💼 Мои проекты</h2>
-                <div class="filter-buttons">
-                    <button class="filter-btn active">🌐 Все</button>
-                    <button class="filter-btn">📝 HTML</button>
-                    <button class="filter-btn">⚡ JS</button>
-                    <button class="filter-btn">⚛️ React</button>
+            <div class="container">
+                <div class="page-header">
+                    <h2>Мои проекты</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="html">HTML/CSS</button>
+                        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                        <button class="filter-btn" data-filter="react">React</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="projects-grid">
-                <div class="project-card large">
-                    <img src="images/project1-full.jpg" alt="Личный сайт" class="project-image" onerror="this.style.display='none'">
-                    <h3>🌟 Личный сайт</h3>
-                    <p>HTML, CSS</p>
-                    <p>Современный адаптивный дизайн с анимациями</p>
-                </div>
-                <div class="project-card large">
-                    <img src="images/project2-full.jpg" alt="Todo-приложение" class="project-image" onerror="this.style.display='none'">
-                    <h3>✅ Todo-приложение</h3>
-                    <p>JavaScript</p>
-                    <p>Управление задачами с локальным хранением</p>
-                </div>
-                <div class="project-card large">
-                    <img src="images/project3-full.jpg" alt="Интернет-магазин" class="project-image" onerror="this.style.display='none'">
-                    <h3>🛒 Интернет-магазин</h3>
-                    <p>React</p>
-                    <p>Полнофункциональный e-commerce с корзиной</p>
-                </div>
-                <div class="project-card large">
-                    <img src="images/project4-full.jpg" alt="Портфолио" class="project-image" onerror="this.style.display='none'">
-                    <h3>🎨 Портфолио</h3>
-                    <p>Bootstrap</p>
-                    <p>Responsive веб-дизайн с галереей работ</p>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="html">
+                        <img src="../images/project1.jpg" alt="Личный сайт">
+                        <div class="project-content">
+                            <h3>Личный сайт</h3>
+                            <p>Многостраничный адаптивный веб-сайт с использованием семантической разметки HTML5 и современных методов CSS3</p>
+                            <div class="tech-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">Flexbox</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small">Демо</a>
+                                <a href="#" class="btn btn-small btn-secondary">Код</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="javascript">
+                        <img src="../images/project2.jpg" alt="Todo-приложение">
+                        <div class="project-content">
+                            <h3>Todo-приложение</h3>
+                            <p>Интерактивное приложение для управления задачами с возможностью добавления, редактирования и удаления</p>
+                            <div class="tech-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">LocalStorage</span>
+                                <span class="tag">DOM API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small">Демо</a>
+                                <a href="#" class="btn btn-small btn-secondary">Код</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="react">
+                        <img src="../images/project3.jpg" alt="Интернет-магазин">
+                        <div class="project-content">
+                            <h3>Интернет-магазин</h3>
+                            <p>Полнофункциональное приложение электронной коммерции с корзиной покупок, фильтрацией товаров и оформлением заказа</p>
+                            <div class="tech-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">React Hooks</span>
+                                <span class="tag">Context API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small">Демо</a>
+                                <a href="#" class="btn btn-small btn-secondary">Код</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="html">
+                        <img src="../images/project4.jpg" alt="Портфолио">
+                        <div class="project-content">
+                            <h3>Портфолио Bootstrap</h3>
+                            <p>Современное портфолио с использованием Bootstrap Framework для быстрой и адаптивной верстки</p>
+                            <div class="tech-tags">
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small">Демо</a>
+                                <a href="#" class="btn btn-small btn-secondary">Код</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Портфолио студента |</p>
+        <div class="container">
+            <p>&copy; 2025 Иван Лебедев. Все права защищены.</p>
+            <div class="footer-contacts">
+                <a href="mailto:student@edu.ru">student@edu.ru</a>
+                <a href="https://github.com/username" target="_blank">GitHub</a>
+            </div>
+        </div>
     </footer>
+
+    
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle">Название проекта</h3>
+            <img id="modalImage" src="" alt="Проект">
+            <p id="modalDescription">Описание проекта</p>
+            <div id="modalTech" class="tech-tags"></div>
+            <div class="modal-links">
+                <a id="modalDemo" href="#" class="btn">Демо</a>
+                <a id="modalCode" href="#" class="btn btn-secondary">Исходный код</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/filters.js"></script>
+    <script src="../scripts/modal.js"></script>
 </body>
 </html>

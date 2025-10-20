@@ -4,74 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - Портфолио студента</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <header>
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="images/logo.png" alt="Логотип" />
-      <span class="navbar-text">Лебедев Иван</span>
-    </div>
-    <div class="navbar-links">
-      <a href="../index.html">🏠 Главная</a>
-      <a href="projects.html">💼 Проекты</a>
-      <a href="diary.html">📚 Дневник</a>
-      <a href="contacts.html">📞 Контакты</a>
-    </div>
-  </nav>
-</header>
-
+        <div class="container">
+            <div class="logo">
+                <img src="../images/icons/icons8-github-50.png" alt="Логотип" class="logo-img">
+                <h1>Иван Лебедев</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="diary.html">Дневник</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section class="contacts-page">
-            <div class="contact-form">
-                <h2>📬 Свяжитесь со мной</h2>
-                
-                <form>
-                    <div class="form-group">
-                        <label for="name">👤 Имя:</label>
-                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">📧 Email:</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">💬 Сообщение:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Напишите ваше сообщение..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">🚀 Отправить сообщение</button>
-                </form>
-            </div>
+            <div class="container">
+                <h2>Свяжитесь со мной</h2>
 
-            <div class="contact-info">
-                <h3>📞 Мои контакты</h3>
-                <div class="contact-item">
-                    <span class="contact-icon">📧</span>
-                    <span>student@edu.ru</span>
+                <div class="contacts-wrapper">
+                    <div class="contact-form-section">
+                        <h3>Отправить сообщение</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Имя *</label>
+                                <input type="text" id="name" name="name" required minlength="2" placeholder="Ваше имя">
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Тема</label>
+                                <input type="text" id="subject" name="subject" placeholder="Тема сообщения">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Сообщение *</label>
+                                <textarea id="message" name="message" rows="6" required minlength="10" placeholder="Ваше сообщение..."></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn">Отправить сообщение</button>
+                            <div id="formSuccess" class="success-message"></div>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h3>Контактная информация</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <img src="../images/icons/icons8-новый-пост-50.png" alt="Email" class="contact-icon">
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:student@edu.ru">lebedev.i.m@edu.mirea.ru</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <img src="../images/icons/icons8-github-50.png" alt="GitHub" class="contact-icon">
+                                <div class="contact-details">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/username" target="_blank">github.com/qGame4K</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <img src="../images/icons/icons8-маркер-50.png" alt="Местоположение" class="contact-icon">
+                                <div class="contact-details">
+                                    <h4>Местоположение</h4>
+                                    <p>Москва, Россия</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-details">
+                                    <h4>Социальные сети</h4>
+                                    <div class="social-links">
+                                        <a href="https://linkedin.com/in/username" target="_blank" class="social-link">LinkedIn</a>
+                                        <a href="https://telegram.me/username" target="_blank" class="social-link">Telegram</a>
+                                        <a href="https://vk.com/username" target="_blank" class="social-link">VK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="availability">
+                            <h4>Доступность</h4>
+                            <p>Готов к сотрудничеству и новым проектам. Обычно отвечаю в течение 24 часов.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🐙</span>
-                    <span>GitHub:qGame4K</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📍</span>
-                    <span>Мсоква, Россия</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📱</span>
-                    <span>+7 (999) 999-99-99</span>
+
+                <div class="map-section">
+                    <h3>Где меня найти</h3>
+                    <div class="map-placeholder">
+                        <p>📍 РТУ МИРЭА<br>
+                        Москва, Россия</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Портфолио студента |</p>
+        <div class="container">
+            <p>&copy; 2025 Иван Лебедев. Все права защищены.</p>
+            <div class="footer-contacts">
+                <a href="mailto:@edu.ru">lebedev.i.m@edu.mirea.ru</a>
+                <a href="https://github.com/username" target="_blank">GitHub</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="../scripts/form-validation.js"></script>
 </body>
 </html>
