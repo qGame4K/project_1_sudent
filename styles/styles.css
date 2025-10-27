@@ -274,16 +274,36 @@ footer .container {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project-card {
+  width: 100%;
+  max-width: 300px;        /* ограничиваем максимальную ширину */
+  height: auto;            /* явно не фиксируем высоту карточки */
+  overflow: hidden;        /* скрываем выплывающие элементы */
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.project-content {
+  min-height: auto;        /* не давайте минимальную высоту контенту */
+  padding: 15px;           /* явно укажите паддинг */
+}
+
+
+
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
 
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
+
 
 .project-card h3 {
     margin: 16px 20px 8px;
@@ -296,9 +316,6 @@ footer .container {
     font-size: 14px;
 }
 
-.project-content {
-    padding: 20px;
-}
 
 .tech-tags {
     display: flex;
