@@ -681,7 +681,7 @@ footer .container {
     margin-top: 24px;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
